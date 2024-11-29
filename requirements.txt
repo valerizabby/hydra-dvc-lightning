@@ -1,0 +1,10 @@
+setuptools==75.0.0
+pybind11==2.13.6
+build==1.2.2
+numpy==2.1.2
+scipy==1.14.1
+hydra-core
+omegaconf
+pytorch_lightning
+torch
+torchvision
