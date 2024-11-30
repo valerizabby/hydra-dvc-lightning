@@ -1,6 +1,6 @@
 CXX=g++
 CXXFLAGS=-std=c++11 -O3 -march=native -Wall -I$(SRC_DIR) $(shell python3 -m pybind11 --includes)
-PY_LDFLAGS=$(shell python3-config --ldflags) -shared -fPIC
+PY_LDFLAGS=$(shell python3-config --ldflags) -shared -fPIC -undefined dynamic_lookup
 GTEST_FLAGS=-lgtest -lgtest_main -pthread
 SRC_DIR=meanvector/src
 TESTS_DIR=meanvector/tests

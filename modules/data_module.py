@@ -1,3 +1,5 @@
+from turtledemo.clock import setup
+
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
 from torchvision.datasets import MNIST
