@@ -24,30 +24,3 @@ def train(cfg: DictConfig):
 
 if __name__ == "__main__":
     train()
-
-# import hydra
-# from omegaconf import DictConfig
-# import pytorch_lightning as pl
-# from pytorch_lightning.loggers import TensorBoardLogger
-# from modules.data_module import CustomDataModule
-# from modules.model import CustomClassifier
-#
-#
-# @hydra.main(version_base=None, config_path="conf", config_name="config")
-# def train(cfg: DictConfig):
-#     data_module = CustomDataModule(cfg.data, batch_size=int(cfg.data.batch_size))
-#     model = CustomClassifier(cfg.model,
-#                              num_classes=int(cfg.data.num_classes),
-#                              lr=float(cfg.model.lr))
-#     logger = TensorBoardLogger("logs", name="custom_model")
-#
-#     trainer = pl.Trainer(
-#         max_epochs=10,
-#         logger=logger,
-#         log_every_n_steps=10,
-#     )
-#     trainer.fit(model, data_module)
-#
-#
-# if __name__ == "__main__":
-#     train()
